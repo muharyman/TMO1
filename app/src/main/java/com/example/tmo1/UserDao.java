@@ -22,4 +22,12 @@ public interface UserDao {
     @Query("SELECT SUM(terminal1) FROM tuser WHERE pekerjaan = :pekerjaan")
     int getSumTerminal1(String pekerjaan);
 
+    // Edited by Hamdi
+    @Query("SELECT pekerjaan, SUM(terminal1) AS count FROM tUser GROUP BY pekerjaan")
+    List<ValueCount> getSumTotal1ByPekerjaan();
+
+    class ValueCount {
+       public String pekerjaan;
+       public Integer count;
+    }
 }
