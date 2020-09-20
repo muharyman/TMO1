@@ -17,7 +17,7 @@ public interface UserDao {
     long insertUser(User user);
 
     @Query("SELECT * FROM tUser WHERE namaLengkap = :name")
-    User getUserById(String name);
+    User getUserByNama(String name);
 
     @Query("SELECT SUM(terminal1) FROM tuser WHERE pekerjaan = :pekerjaan")
     int getSumTerminal1(String pekerjaan);
@@ -126,7 +126,7 @@ public interface UserDao {
 
     @Query("SELECT SUM(instrumental18) FROM tuser WHERE pekerjaan = :pekerjaan")
     int getSuminstrumental18(String pekerjaan);
-    
+
     // Edited by Hamdi
     @Query("SELECT pekerjaan, SUM(terminal1) AS count FROM tUser GROUP BY pekerjaan")
     List<ValueCount> getSumTotal1ByPekerjaan();

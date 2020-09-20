@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
     EditText namaLengkap ;
     @BindView(R.id.pekerjaan)
     EditText pekerjaan ;
-    @BindView(R.id.nama_perusahaan)
-    EditText namaPerusahaan;
 
     private AppDatabase database;
 
@@ -144,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.submit)
     public void submit() {
-        if (namaLengkap.getText().toString().equals("") || pekerjaan.getText().toString().equals("") || namaPerusahaan.getText().toString().equals("")) {
-            Toast.makeText(MainActivity.this, "Nama atau Pekerjaan atau Perusahaan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
+        if (namaLengkap.getText().toString().equals("") || pekerjaan.getText().toString().equals("")) {
+            Toast.makeText(MainActivity.this, "Nama atau Pekerjaan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
         } else if (count_instrumental < 3 || count_instrumental > 5 || count_terminal < 3 || count_terminal > 5) {
             Log.d("count_terminal", String.valueOf(count_terminal));
             Log.d("count_instrumental", String.valueOf(count_instrumental));
@@ -155,7 +153,6 @@ public class MainActivity extends AppCompatActivity {
 
             data.namaLengkap = namaLengkap.getText().toString();
             data.pekerjaan = pekerjaan.getText().toString();
-            data.namaPerusahaan = namaPerusahaan.getText().toString();
 
             int terminal_1 = terminal1.isChecked() ? 1 : 0;
             int terminal_2 = terminal2.isChecked() ? 1 : 0;
@@ -237,12 +234,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Data Berhasil disimpan", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, ResultActivity.class);
-            intent.putExtra("STRING_I_NEED", namaLengkap.getText().toString());
+            intent.putExtra("STRING_I_NAMA", namaLengkap.getText().toString());
+            intent.putExtra("STRING_I_PEKERJAAN", pekerjaan.getText().toString());
             startActivity(intent);
 
             namaLengkap.setText("");
             pekerjaan.setText("");
-            namaPerusahaan.setText("");
 
         }
     }
