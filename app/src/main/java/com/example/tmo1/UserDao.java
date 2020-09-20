@@ -16,6 +16,10 @@ public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long insertUser(User user);
 
+    @Query("SELECT * FROM tUser WHERE namaLengkap = :name")
+    User getUserById(String name);
 
+    @Query("SELECT SUM(terminal1) FROM tuser WHERE pekerjaan = :pekerjaan")
+    int getSumTerminal1(String pekerjaan);
 
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -233,11 +234,15 @@ public class MainActivity extends AppCompatActivity {
 
             insertData(data);
 
+            Toast.makeText(MainActivity.this, "Data Berhasil disimpan", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("STRING_I_NEED", namaLengkap.getText().toString());
+            startActivity(intent);
+
             namaLengkap.setText("");
             pekerjaan.setText("");
             namaPerusahaan.setText("");
-
-            Toast.makeText(MainActivity.this, "Data Berhasil disimpan", Toast.LENGTH_SHORT).show();
 
         }
     }
