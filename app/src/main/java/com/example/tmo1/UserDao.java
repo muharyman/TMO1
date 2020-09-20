@@ -15,7 +15,7 @@ public interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long insertUser(User user);
-    
+
     @Query("SELECT * FROM tUser WHERE namaLengkap = :name")
     User getUserByNama(String name);
 
@@ -74,58 +74,58 @@ public interface UserDao {
     int getSumTerminal18(String pekerjaan);
 
     @Query("SELECT SUM(instrumental1) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental1(String pekerjaan);
+    int getSumInstrumental1(String pekerjaan);
 
     @Query("SELECT SUM(instrumental2) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental2(String pekerjaan);
+    int getSumInstrumental2(String pekerjaan);
 
     @Query("SELECT SUM(instrumental3) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental3(String pekerjaan);
+    int getSumInstrumental3(String pekerjaan);
 
     @Query("SELECT SUM(instrumental4) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental4(String pekerjaan);
+    int getSumInstrumental4(String pekerjaan);
 
     @Query("SELECT SUM(instrumental5) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental5(String pekerjaan);
+    int getSumInstrumental5(String pekerjaan);
 
     @Query("SELECT SUM(instrumental6) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental6(String pekerjaan);
+    int getSumInstrumental6(String pekerjaan);
 
     @Query("SELECT SUM(instrumental7) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental7(String pekerjaan);
+    int getSumInstrumental7(String pekerjaan);
 
     @Query("SELECT SUM(instrumental8) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental8(String pekerjaan);
+    int getSumInstrumental8(String pekerjaan);
 
     @Query("SELECT SUM(instrumental9) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental9(String pekerjaan);
+    int getSumInstrumental9(String pekerjaan);
 
     @Query("SELECT SUM(instrumental10) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental10(String pekerjaan);
+    int getSumInstrumental10(String pekerjaan);
 
     @Query("SELECT SUM(instrumental11) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental11(String pekerjaan);
+    int getSumInstrumental11(String pekerjaan);
 
     @Query("SELECT SUM(instrumental12) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental12(String pekerjaan);
+    int getSumInstrumental12(String pekerjaan);
 
     @Query("SELECT SUM(instrumental13) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental13(String pekerjaan);
+    int getSumInstrumental13(String pekerjaan);
 
     @Query("SELECT SUM(instrumental14) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental14(String pekerjaan);
+    int getSumInstrumental14(String pekerjaan);
 
     @Query("SELECT SUM(instrumental15) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental15(String pekerjaan);
+    int getSumInstrumental15(String pekerjaan);
 
     @Query("SELECT SUM(instrumental16) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental16(String pekerjaan);
+    int getSumInstrumental16(String pekerjaan);
 
     @Query("SELECT SUM(instrumental17) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental17(String pekerjaan);
+    int getSumInstrumental17(String pekerjaan);
 
     @Query("SELECT SUM(instrumental18) FROM tuser WHERE pekerjaan = :pekerjaan")
-    int getSuminstrumental18(String pekerjaan);
+    int getSumInstrumental18(String pekerjaan);
 
     // Edited by Hamdi
     @Query("SELECT pekerjaan, SUM(terminal1) AS count FROM tUser GROUP BY pekerjaan")

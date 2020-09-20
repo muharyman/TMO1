@@ -50,6 +50,7 @@ public class ResultActivity extends AppCompatActivity {
     ArrayList<String> terminalValue;
     ArrayList<String> instrumentalValue;
     ArrayList<Integer> listCount;
+    ArrayList<Integer> listCount2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +74,7 @@ public class ResultActivity extends AppCompatActivity {
         user = database.userDao().getUserByNama(nama);
 
         listCount = new ArrayList<Integer>();
+        listCount2 = new ArrayList<Integer>();
 
         int t1 = database.userDao().getSumTerminal1(pekerjaan);
         int t2 = database.userDao().getSumTerminal2(pekerjaan);
@@ -93,6 +95,25 @@ public class ResultActivity extends AppCompatActivity {
         int t17 = database.userDao().getSumTerminal17(pekerjaan);
         int t18 = database.userDao().getSumTerminal18(pekerjaan);
 
+        int i1 = database.userDao().getSumInstrumental1(pekerjaan);
+        int i2 = database.userDao().getSumInstrumental2(pekerjaan);
+        int i3 = database.userDao().getSumInstrumental3(pekerjaan);
+        int i4 = database.userDao().getSumInstrumental4(pekerjaan);
+        int i5 = database.userDao().getSumInstrumental5(pekerjaan);
+        int i6 = database.userDao().getSumInstrumental6(pekerjaan);
+        int i7 = database.userDao().getSumInstrumental7(pekerjaan);
+        int i8 = database.userDao().getSumInstrumental8(pekerjaan);
+        int i9 = database.userDao().getSumInstrumental9(pekerjaan);
+        int i10 = database.userDao().getSumInstrumental10(pekerjaan);
+        int i11 = database.userDao().getSumInstrumental11(pekerjaan);
+        int i12 = database.userDao().getSumInstrumental12(pekerjaan);
+        int i13 = database.userDao().getSumInstrumental13(pekerjaan);
+        int i14 = database.userDao().getSumInstrumental14(pekerjaan);
+        int i15 = database.userDao().getSumInstrumental15(pekerjaan);
+        int i16 = database.userDao().getSumInstrumental16(pekerjaan);
+        int i17 = database.userDao().getSumInstrumental17(pekerjaan);
+        int i18 = database.userDao().getSumInstrumental18(pekerjaan);
+
         listCount.add(t1); listCount.add(t2);
         listCount.add(t3); listCount.add(t4);
         listCount.add(t5); listCount.add(t6);
@@ -102,6 +123,16 @@ public class ResultActivity extends AppCompatActivity {
         listCount.add(t13); listCount.add(t14);
         listCount.add(t15); listCount.add(t16);
         listCount.add(t17); listCount.add(t18);
+
+        listCount2.add(i1); listCount2.add(i2);
+        listCount2.add(i3); listCount2.add(i4);
+        listCount2.add(i5); listCount2.add(i6);
+        listCount2.add(i7); listCount2.add(i8);
+        listCount2.add(i9); listCount2.add(i10);
+        listCount2.add(i11); listCount2.add(i12);
+        listCount2.add(i13); listCount2.add(i14);
+        listCount2.add(i15); listCount2.add(i16);
+        listCount2.add(i17); listCount2.add(i18);
 
 
 
@@ -263,7 +294,8 @@ public class ResultActivity extends AppCompatActivity {
     @OnClick(R.id.lihatSummary)
     public void click(){
         Intent intent =  new Intent(this, SummaryActivity.class);
-        intent.putExtra("LIST_TERMINAL", listCount);
+        intent.putIntegerArrayListExtra("LIST_TERMINAL", listCount);
+        intent.putIntegerArrayListExtra("LIST_INSTRUMENTAL", listCount2);
         startActivity(intent);
     }
 
