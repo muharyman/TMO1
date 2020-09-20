@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Lengkap"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/nama_lengkap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Nama Lengkap"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pekerjaan"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/pekerjaan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Pekerjaan"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Perusahaan"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/nama_perusahaan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Nama Lengkap"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:text="Choose goals that you work towards and view as most desirable"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+
+        <CheckBox
+            android:id="@+id/terminal1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'd rather live a comfortable &amp; prosperuous life"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I love living an exciting life, specifically a stimulating and active life"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I enjoy a sense of accomplishment &amp; a lasting contribution"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="It would be nice for me personally if the world is at peace, free of war &amp; conflict"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I like a world of the beauty of the nature and the arts"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I support equal opportunity for all"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'd love to live a secure life for my family  especially taking care of the loved ones"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I support freedom, independence and free choices"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Happiness &amp; contentedness brings me joy"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="A freedom from inner conflict &amp; inner harmony are essential for me"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="Mature love as well as sexual and spiritual intimacy brings me satisfaction"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="A protection from attack &amp; national security bring me a  peace of mind"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I prefer an enjoyable and leisure life (pleasure)"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="A salvation, feeling saved and eternal life are essential"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I appreciate self respect &amp; self esteem"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I would like to pick social recognition, a respect and admiration as my objectives"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I choose to have a true friendship"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/terminal18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="A wisdom and a mature understanding of life brings me delight"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose you prefered methods of behavior"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:id="@+id/instrumental1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm always passionate about work"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I like hearing new ideas from other people"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm competent and effective at work"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I always try to be cheerful every day"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I don't like dirty places"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm always standing up for my beliefs"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm easy to forgive others"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I always think about the welfare of others"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I always try to be honest"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I have a lot of creative ideas in my mind"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm used to living independently"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I think clearly and quickly, also easily understand difficult ideas"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I think rationally about many things"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm a tender and loving person"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I respect and obey older people"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I speak with well-mannered"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm responsible for all my job"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/instrumental18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:checked="false"
+            android:padding="20dp"
+            android:text="I'm easy in self-controlled"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_marginVertical="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</ScrollView>
