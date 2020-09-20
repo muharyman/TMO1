@@ -145,8 +145,6 @@ public class MainActivity extends AppCompatActivity {
         if (namaLengkap.getText().toString().equals("") || pekerjaan.getText().toString().equals("")) {
             Toast.makeText(MainActivity.this, "Nama atau Pekerjaan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
         } else if (count_instrumental < 3 || count_instrumental > 5 || count_terminal < 3 || count_terminal > 5) {
-            Log.d("count_terminal", String.valueOf(count_terminal));
-            Log.d("count_instrumental", String.valueOf(count_instrumental));
             Toast.makeText(MainActivity.this, "Pilihlah 3 - 5 poin di setiap kategori", Toast.LENGTH_SHORT).show();
         } else {
             User data = new User();
