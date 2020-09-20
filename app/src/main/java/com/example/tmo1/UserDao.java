@@ -16,6 +16,8 @@ public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long insertUser(User user);
 
+    @Query("SELECT SUM(terminal1) FROM tUser GROUP BY pekerjaan")
+    List<String, Integer> getSumTotal1ByPekerjaan();
 
 
 }
