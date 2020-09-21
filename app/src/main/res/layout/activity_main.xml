@@ -45,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pekerjaan"
+                android:text="Departemen"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -54,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Pekerjaan"
+                android:hint="Departemen"
                 android:inputType="textPersonName" />
 
         </LinearLayout>
@@ -312,10 +312,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose you prefered methods of behavior"
+            android:text="Choose your prefered methods of behavior"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="18dp" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp"/>
 
         <CheckBox
             android:id="@+id/instrumental1"

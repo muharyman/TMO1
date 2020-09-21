@@ -21,8 +21,11 @@ public class ResultActivity extends AppCompatActivity {
     TextView text1;
     @BindView(R.id.text2)
     TextView text2;
-    @BindView(R.id.lihatSummary)
-    Button lihatSummary;
+    @BindView(R.id.lihatSummaryTerminal)
+    Button lihatSummaryTerminal;
+
+    @BindView(R.id.lihatSummaryInstrumental)
+    Button lihatSummaryInstrumental;
 
     @BindView(R.id.terminalx1)
     TextView terminalx1;
@@ -133,8 +136,6 @@ public class ResultActivity extends AppCompatActivity {
         listCount2.add(i13); listCount2.add(i14);
         listCount2.add(i15); listCount2.add(i16);
         listCount2.add(i17); listCount2.add(i18);
-
-
 
         // Terminal
         if (user.terminal1 ==1 ){
@@ -291,10 +292,16 @@ public class ResultActivity extends AppCompatActivity {
         instrumentalx3.setText(instrumentalValue.get(2));
     }
 
-    @OnClick(R.id.lihatSummary)
-    public void click(){
+    @OnClick(R.id.lihatSummaryTerminal)
+    public void clickTerminal(){
         Intent intent =  new Intent(this, SummaryActivity.class);
         intent.putIntegerArrayListExtra("LIST_TERMINAL", listCount);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.lihatSummaryInstrumental)
+    public void clickInstrumental(){
+        Intent intent =  new Intent(this, SummaryActivityTwo.class);
         intent.putIntegerArrayListExtra("LIST_INSTRUMENTAL", listCount2);
         startActivity(intent);
     }

@@ -18,35 +18,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class SummaryActivity extends AppCompatActivity {
+public class SummaryActivityTwo extends AppCompatActivity {
 
-    ArrayList<Integer> list1 =  new ArrayList<Integer>();
-    List<BarEntry> entries1;
-
+    ArrayList<Integer> list2 =  new ArrayList<Integer>();
+    List<BarEntry> entries2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_summary);
+        setContentView(R.layout.activity_summary_2);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        entries1 = new ArrayList<>();
+        entries2 = new ArrayList<>();
         if(bundle != null){
-            list1 = bundle.getIntegerArrayList("LIST_TERMINAL");
+            list2 = bundle.getIntegerArrayList("LIST_INSTRUMENTAL");
 
             for (int i = 0; i< 18 ; i++){
-                 entries1.add(new BarEntry(i, list1.get(i)));
+                entries2.add(new BarEntry(i, list2.get(i)));
             }
         }
 
-        BarChart chart1 = (BarChart) findViewById(R.id.chart1);
+        BarChart chart2 = (BarChart) findViewById(R.id.chart2);
 
-        BarDataSet set = new BarDataSet(entries1, "Terminal Value");
-        BarData data = new BarData(set);
-        data.setBarWidth(0.8f); // set custom bar width
-        chart1.setData(data);
-        chart1.setFitBars(true); // make the x-axis fit exactly all bars
-        chart1.invalidate(); // refresh
-
+        BarDataSet set2 = new BarDataSet(entries2, "Instrumental Value");
+        BarData data2 = new BarData(set2);
+        data2.setBarWidth(0.8f); // set custom bar width
+        chart2.setData(data2);
+        chart2.setFitBars(true); // make the x-axis fit exactly all bars
+        chart2.invalidate(); // refresh
     }
 }

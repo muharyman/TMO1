@@ -19,6 +19,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".SummaryActivity" />
+        <activity android:name=".SummaryActivityTwo" />
     </application>
 
 </manifest>
